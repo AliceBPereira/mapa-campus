@@ -1,0 +1,6 @@
+/* Personalize o pop-up */
+.leaflet-popup-content {
+    background-color: #c76161;
+    color: #333;
+    padding: 10px;
+  }

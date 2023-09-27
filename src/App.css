@@ -1,9 +1,17 @@
 .leaflet-container{
   height: 100vh;
   width: 200vh;
+
 }
 .leaflet-div-icon {
   background: transparent;
   border: none;
+}
+.leaflet-popup-content {
+  background-color: rgb(255, 255, 255); /* Altere a cor de fundo */
+  width: 20px; /* Largura personalizada */
+  height: 20px; /* Altura personalizada */
+  color: #333;
+  padding: 20px;
 }
   
