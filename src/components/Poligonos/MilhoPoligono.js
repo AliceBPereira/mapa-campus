@@ -1,7 +1,7 @@
 import React from "react";
 import { Polygon, Popup } from "react-leaflet";
-import { milho1 } from "../../coordenadas/Milho";
-import { milho2 } from "../../coordenadas/Milho";
+import { milho1 } from "../../coordenadas/CoordMilho";
+import { milho2 } from "../../coordenadas/CoordMilho";
 
 const purpleOptions = { color: "purple" };
 

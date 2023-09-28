@@ -2,7 +2,7 @@ import React from "react";
 import { Marker, Popup, Polygon } from "react-leaflet";
 import L from "leaflet";
 import markercafe from "../../icones.png/coffee_beam_20595.png";
-import { talhao1 } from "../../coordenadas/Cafe";
+import { talhao1 } from "../../coordenadas/CoordCafe";
 
 const myIcon = new L.Icon({
   iconUrl: markercafe,

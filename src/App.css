@@ -1,6 +1,6 @@
 .leaflet-container{
   height: 100vh;
-  width: 200vh;
+  width: auto;
 
 }
 .leaflet-div-icon {
@@ -9,9 +9,37 @@
 }
 .leaflet-popup-content {
   background-color: rgb(255, 255, 255); /* Altere a cor de fundo */
-  width: 20px; /* Largura personalizada */
-  height: 20px; /* Altura personalizada */
-  color: #333;
-  padding: 20px;
+  color: #333; /* Cor do texto */
+  padding: auto; /* Espaçamento interno */
+  width: auto; /* Largura automática */
+  height: auto; /* Altura automática */
 }
-  
+/*.leaflet-control-layers {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  background-color: white;
+  padding: 50px;
+  border: 1px solid #ccc;
+  max-height: 80%;
+  overflow-y: auto;
+}*/
+.left-column {
+  width: 25%; /* Largura inicial da coluna esquerda */
+  height: 100vh; /* Ocupa toda a altura da tela */
+  float: left; /* Faz com que a coluna esquerda fique à esquerda do mapa */
+  background-color: #f0f0f0; /* Cor de fundo para a coluna esquerda */
+  overflow-y: auto;
+}
+
+/* Estilos para a coluna direita (mapa) */
+.right-column {
+  width: 75%; /* Largura inicial da coluna direita */
+  height: 100vh; /* Ocupa toda a altura da tela */
+  float: left; /* Faz com que a coluna direita fique à direita do índice */
+}
+
+/* Estilos para o índice */
+.index {
+  padding: 10px;
+}
