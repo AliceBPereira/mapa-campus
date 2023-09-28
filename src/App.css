@@ -1,6 +1,6 @@
 .leaflet-container{
   height: 100vh;
-  width: auto;
+  width: 200vh;
 
 }
 .leaflet-div-icon {
@@ -19,7 +19,7 @@
   top: 50px;
   right: 50px;
   background-color: white;
-  padding: 50px;
+  padding: auto;
   border: 1px solid #ccc;
   max-height: 80%;
   overflow-y: auto;

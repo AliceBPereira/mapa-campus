@@ -9,22 +9,26 @@ import "./App.css";
 import LocalMarkers from "./components/Markers/MarkerPredios";
 import MilhoPolygons from "./components/Poligonos/MilhoPoligono";
 import CafePolygons from "./components/Poligonos/CafePoligono";
+import Gaveta from "./gaveta";
+/*npm install @mui/material @mui/icons-material https://mui.com/material-ui/react-drawer/*/ 
 
 function App() {
   return (
     <div>
       
       <div className="left-column">
+      <Gaveta/>
         <div className="index">
           <h2>Índice</h2>
           <ul>
             <li>Item 1</li>
             <li>Item 2</li>
             <li>Item 3</li>
+           
           </ul>
         </div>
       </div>
-      <div class="right-column">
+      <div className="right-column">
         <MapContainer center={[-21.3504826, -46.5282748]} zoom={16}>
           <TileLayer
             attribution='&copy; <a href="https://www.maptiler.com/">MapTiler</a> &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -54,5 +58,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
