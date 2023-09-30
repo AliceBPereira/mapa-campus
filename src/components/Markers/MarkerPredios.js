@@ -27,6 +27,7 @@ import {
   ZootecniaIICaprinoOvino,
 } from "../../coordenadas/CoordPredios";
 import imgPredioH from "../../ImgLugares/PredioH.png";
+import { buildingMarkers } from '../../mocks/markers'
 
 const Iconlugar = new L.Icon({
   iconUrl: markeredificios,
@@ -43,13 +44,22 @@ const LocalMarkers = () => {
     <>
       <Marker icon={Iconlugar} position={predioH}>
         <Popup><p>Prédio H</p>
-        <div>
+        <div className="pop-up-container">
           <img src={imgPredioH} alt="Prédio H" />
         </div>
         </Popup>
         
       </Marker>
-      <Marker icon={Iconlugar} position={MecanizacaoAgricola}>
+
+      { buildingMarkers.map((building) => {
+        return (
+          <Marker icon={Iconlugar} position={building.coord}>
+            <Popup>{building.name}</Popup>
+          </Marker>
+        )
+      }) }
+
+      {/* <Marker icon={Iconlugar} position={MecanizacaoAgricola}>
         <Popup>Mecanização Agricola</Popup>
       </Marker>
       <Marker icon={Iconlugar} position={LaboratorioGEAGRO}>
@@ -111,7 +121,7 @@ const LocalMarkers = () => {
       </Marker>
       <Marker icon={Iconlugar} position={ZootecniaIICaprinoOvino}>
         <Popup>Bovinocultura</Popup>
-      </Marker>
+      </Marker> */}
     </>
   );
 };

@@ -46,7 +46,7 @@ export default function Gaveta() {
   };
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', position: 'absolute', zIndex: 9999, top: '15%', left: '15px' }}>
       <CssBaseline />
           <IconButton
             color="green"
