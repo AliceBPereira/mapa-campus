@@ -1,20 +1,20 @@
 import React from "react";
 import { Polygon, Popup } from "react-leaflet";
-import { milho1 } from "../../coordenadas/CoordMilho";
-import { milho2 } from "../../coordenadas/CoordMilho";
+import { MilhoInfo } from "../../Informations/MilhoInfo";
+
 
 const purpleOptions = { color: "purple" };
 
 const MilhoPolygons = () => {
   return (
     <>
-      <Polygon pathOptions={purpleOptions} positions={milho1}>
-        <Popup>Milho 1</Popup>
-      </Polygon>
-      <Polygon pathOptions={purpleOptions} positions={milho2}>
-      
-        <Popup>Milho 2</Popup>
-      </Polygon>
+      { MilhoInfo.map((milho) => {
+        return (
+          <Polygon pathOptions={purpleOptions}  positions={milho.coord}>
+            <Popup>{milho.name} </Popup>
+          </Polygon>
+        )
+      }) }
     </>
   );
 };

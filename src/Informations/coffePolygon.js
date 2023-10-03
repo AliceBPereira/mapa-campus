@@ -8,15 +8,9 @@ export const coffePolygon = [
       [-21.35195, -46.521202],
     ],
   },
-  // Outros objetos de polígonos, se houver.
-];
 
 
-
-
-
-
-  /*}
+  
   {
     name: "Talhão 2",
     coord: [
@@ -357,6 +351,6 @@ export const coffePolygon = [
       [-21.342581, -46.536423],
       [-21.342405, -46.534969],
     ],
-  },*/
+  },];
 
 

@@ -1,14 +1,19 @@
 import React from "react";
 import { Polygon } from "react-leaflet";
-import { Campus } from "../../coordenadas/CoordCampus";
+import { CampusInfo } from "../../Informations/CampusInfo";
+
 
 const greenOptions = { color: "blue" };
 
 const CampusPolygon = () => {
   return (
     <>
-      <Polygon pathOptions={greenOptions} positions={Campus}>
-      </Polygon>
+      { CampusInfo.map((campus) => {
+        return (
+          <Polygon pathOptions={greenOptions}  positions={campus.coord}>
+          </Polygon>
+        )
+      }) }
       
       
     </>

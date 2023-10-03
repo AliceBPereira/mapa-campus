@@ -1,25 +1,19 @@
 import React from "react";
 import { Polygon, Popup } from "react-leaflet";
-import { GadoCorte1, GadoCorte2, GadoCorte3, GadoCorte4 } from "../../coordenadas/CoordGadoCorte";
+import { GadoCorteInfo } from "../../Informations/GadoCorteInfo";
 
 const greenOptions = { color: "orange" };
 
 const GadoCortePolygon = () => {
   return (
     <>
-      <Polygon pathOptions={greenOptions} positions={GadoCorte1}>
-        <Popup></Popup>
-      </Polygon>
-      <Polygon pathOptions={greenOptions} positions={GadoCorte2}>
-        <Popup></Popup>
-      </Polygon>
-      <Polygon pathOptions={greenOptions} positions={GadoCorte3}>
-        <Popup></Popup>
-      </Polygon>
-      <Polygon pathOptions={greenOptions} positions={GadoCorte4}>
-        <Popup></Popup>
-      </Polygon>
-      
+       { GadoCorteInfo.map((gadoCorte) => {
+        return (
+          <Polygon pathOptions={greenOptions}  positions={gadoCorte.coord}>
+            <Popup>{gadoCorte.name} </Popup>
+          </Polygon>
+        )
+      }) }
       
       
     </>
